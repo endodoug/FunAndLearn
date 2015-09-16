@@ -1,0 +1,20 @@
+*** Project Documentation ***
+
+- Supports iOS 9.0 and above.
+- Universal application, supports iPhone 4s and later, and iPads.
+- Requires UIKit and framework.
+- Builds with Xcode 7.
+- Requires Swift 2.0.
+
+
+*** Notes ***
+
+data.plist contains the dummy date and was supplied for the challenge:
+* data.plist contains an array of dictionaries, consisting of a title & description.
+
+The provided solution uses a single class:
+* TableViewController - manages the view from a storyboard to provide the user interface.
+* User can view a list of Survey Titles & Descriptions displayed in a table view.
+* User cannot make selections per Challenge requirements.
+* All the work is done in the viewDidLoad method -> Initialize an array & iterate over the elements to build dataTitle & dataDescription arrays.  
+* Use the baked in TableViewController Methods to build a table & display the data.
