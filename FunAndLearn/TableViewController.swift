@@ -12,9 +12,18 @@ class TableViewController: UITableViewController {
     
     var dataTitle = [String]()
     var dataDescription = [String]()
+    
+    lazy var data = NSMutableData()
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        startConnection()
+        
+        
+       
         
         if let path = NSBundle.mainBundle().pathForResource("data", ofType: "plist") {
             if let arrayOfDictionaries = NSArray(contentsOfFile: path) {
@@ -56,5 +65,40 @@ class TableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //: MARK JSON from URL
+    
+
+    func startConnection() {
+        let urlPath: String = "http://www.mocky.io/v2/560920cc9665b96e1e69bb46"
+        var url: NSURL = NSURL(string: urlPath)!
+        var request: NSURLRequest = NSURLRequest(URL: url)
+        var connection: NSURLConnection = NSURLConnection(request: request, delegate: self, startImmediately: false)!
+        connection.start()
+    }
+    
+    func connection(connection: NSURLConnection!, didReceiveData data: NSData!){
+        self.data.appendData(data)
+    }
+    
+    func connectionDidFinishLoading(connection: NSURLConnection!) {
+        let err: NSError
+        // throwing an error on the line below (can't figure out where the error message is)
+        
+        do {
+        let jsonResult: NSArray = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as! NSArray
+        print(jsonResult)
+
+            
+        } catch{
+            print("error")
+        }
+        
+    }
+   
+    
+    
+    
+    
     
 }

@@ -11,8 +11,8 @@
 		B7260AE51BAA09F400F4801E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7260AE31BAA09F400F4801E /* Main.storyboard */; };
 		B7260AE71BAA09F400F4801E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7260AE61BAA09F400F4801E /* Assets.xcassets */; };
 		B7260AEA1BAA09F400F4801E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7260AE81BAA09F400F4801E /* LaunchScreen.storyboard */; };
-		B7260AF21BAA0AD400F4801E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7260AF11BAA0AD400F4801E /* TableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		B7260AF41BAA0C4400F4801E /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7260AF31BAA0C4400F4801E /* data.plist */; settings = {ASSET_TAGS = (); }; };
+		B7260AF21BAA0AD400F4801E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7260AF11BAA0AD400F4801E /* TableViewController.swift */; };
+		B7260AF41BAA0C4400F4801E /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7260AF31BAA0C4400F4801E /* data.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +93,7 @@
 		B7260AD41BAA09F400F4801E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Doug Harper";
 				TargetAttributes = {
@@ -289,6 +290,7 @@
 				B7260AF01BAA09F400F4801E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
