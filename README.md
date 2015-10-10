@@ -36,4 +36,4 @@ TODO: Write history
 - [iOS Topcoder](http://ios.topcoder.com) 
 
 ## Screenshot
-![screenshot](https://github.com/endodoug/FunAndLearn/blob/master/Simulator%20Screen%20Shot%20Sep%2016%2C%202015%2C%205.48.16%20PM.png)
+![screenshot](https://github.com/endodoug/FunAndLearn/blob/Bind-with-mock-server/Simulator%20Screen%20Shot%20Oct%2010%2C%202015%2C%204.00.47%20PM.png)
