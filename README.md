@@ -32,8 +32,8 @@ TODO: Write history
 
 ## Credits
 
-[Great tutorial about retrieving plist data ](http://www.ioscreator.com/tutorials/load-data-property-list-ios8-swift) on YouTube.
-[iOS Topcoder](http://ios.topcoder.com) 
+- [Great tutorial about retrieving plist data ](http://www.ioscreator.com/tutorials/load-data-property-list-ios8-swift) on YouTube.
+- [iOS Topcoder](http://ios.topcoder.com) 
 
 ## Screenshot
 ![screenshot](https://github.com/endodoug/FunAndLearn/blob/master/Simulator%20Screen%20Shot%20Sep%2016%2C%202015%2C%205.48.16%20PM.png)
