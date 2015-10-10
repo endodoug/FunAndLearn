@@ -8,12 +8,17 @@
 
 import UIKit
 
-class TableViewController: UITableViewController, NSURLConnectionDelegate {
+class TableViewController: UITableViewController, NSURLConnectionDelegate, UISearchDisplayDelegate, UISearchBarDelegate {
     
     var dataTitle = [String]()
     var dataDescription = [String]()
     
     lazy var data = NSMutableData()
+   
+    // search variables
+    
+    var dataTitleList = [String]()
+    var dataTitleFilteredList = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,15 +36,30 @@ class TableViewController: UITableViewController, NSURLConnectionDelegate {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return dataTitle.count
+        if tableView == self.searchDisplayController!.searchResultsTableView {
+            return self.dataTitleFilteredList.count
+        } else {
+            return self.dataTitle.count
+        }
+        
+        //return dataTitle.count
         
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         
-        cell.textLabel!.text = dataTitle[indexPath.row]
+        var searchName : String!
+        if tableView == self.searchDisplayController!.searchResultsTableView {
+            searchName = dataTitleFilteredList[indexPath.row]
+        } else {
+            searchName = dataTitle[indexPath.row]
+        }
+        cell.textLabel?.text = searchName
         cell.detailTextLabel!.text = dataDescription[indexPath.row]
+        
+//        cell.textLabel!.text = dataTitle[indexPath.row]
+//        cell.detailTextLabel!.text = dataDescription[indexPath.row]
         
         return cell
     }
@@ -79,4 +99,28 @@ class TableViewController: UITableViewController, NSURLConnectionDelegate {
             print("error")
         }
     }
+    
+    // MARK: Search Results
+    
+    func filterTableViewForEnterText(searchText: String)
+    {
+        self.dataTitleFilteredList = self.dataTitle.filter({( strCountry : String) -> Bool in
+            var stringForSearch = strCountry.rangeOfString(searchText)
+            return (stringForSearch != nil)
+        })
+    }
+    
+    // MARK: UISearch Delegate Methods
+    
+    func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchString searchString: String?) -> Bool {
+        self.filterTableViewForEnterText(searchString!)
+        return true
+    }
+    
+    func searchDisplayController(controller: UISearchDisplayController,
+        shouldReloadTableForSearchScope searchOption: Int) -> Bool {
+            self.filterTableViewForEnterText(self.searchDisplayController!.searchBar.text!)
+            return true
+    }
+  
 }

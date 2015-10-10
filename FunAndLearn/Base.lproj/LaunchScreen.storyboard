@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Fun 📚 Learn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaM-NM-oSg">
-                                <rect key="frame" x="213" y="282" width="175" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fun 📚 Learn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaM-NM-oSg">
+                                <rect key="frame" x="213" y="282" width="176" height="37"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                 <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -30,7 +30,7 @@
                         <color key="backgroundColor" red="0.16154590249061584" green="0.62567633390426636" blue="0.26375618577003479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="aaM-NM-oSg" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="FCE-aB-hAI"/>
-                            <constraint firstItem="aaM-NM-oSg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="c4I-q8-Kap"/>
+                            <constraint firstItem="aaM-NM-oSg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="1" id="c4I-q8-Kap"/>
                         </constraints>
                     </view>
                 </viewController>
