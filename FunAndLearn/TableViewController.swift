@@ -42,8 +42,6 @@ class TableViewController: UITableViewController, NSURLConnectionDelegate, UISea
             return self.dataTitle.count
         }
         
-        //return dataTitle.count
-        
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -55,11 +53,9 @@ class TableViewController: UITableViewController, NSURLConnectionDelegate, UISea
         } else {
             searchName = dataTitle[indexPath.row]
         }
+        
         cell.textLabel?.text = searchName
         cell.detailTextLabel!.text = dataDescription[indexPath.row]
-        
-//        cell.textLabel!.text = dataTitle[indexPath.row]
-//        cell.detailTextLabel!.text = dataDescription[indexPath.row]
         
         return cell
     }
@@ -88,7 +84,6 @@ class TableViewController: UITableViewController, NSURLConnectionDelegate, UISea
         do {
         let jsonResult: NSArray = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as! NSArray
         
-            // print(jsonResult)
             for dict in jsonResult {
                 dataTitle.append(dict.objectForKey("title") as! String)
                 dataDescription.append(dict.objectForKey("description") as! String)
